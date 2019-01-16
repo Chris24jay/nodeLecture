@@ -28,15 +28,13 @@ app.use(boydParser.json());
 //sting, function(obj,obj)
 app.get('/api/book', ctrl.getAll)
 
+app.get('/api/book/:id', ctrl.getOneBook)
+
 app.post('/api/book', ctrl.createBook)
 
-app.get('/api/book/:id', ctr.getOneBook)
-
-
+app.put('/api/book/:id', ctrl.updateBook)
 
 app.delete('/api/book/:id', ctrl.deleteBook)
-
-app.put('/api/book/:id', ctrl.updateBook)
 
 app.listen(8080, () => {
     console.log(`8080 Hello helloooooo`)
